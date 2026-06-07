@@ -1,0 +1,74 @@
+{
+  "4111010003": {
+    "school_name": "清华大学",
+    "province": "北京",
+    "competent_department": "教育部",
+    "location": "北京",
+    "level": "本科",
+    "is_private": false,
+    "tier": "985"
+  },
+  "411101001": {
+    "school_name": "北京大学",
+    "province": "北京",
+    "competent_department": "教育部",
+    "location": "北京",
+    "level": "本科",
+    "is_private": false,
+    "tier": "985"
+  },
+  "4133010335": {
+    "school_name": "浙江大学",
+    "province": "浙江",
+    "competent_department": "教育部",
+    "location": "杭州",
+    "level": "本科",
+    "is_private": false,
+    "tier": "985"
+  },
+  "4131010248": {
+    "school_name": "上海交通大学",
+    "province": "上海",
+    "competent_department": "教育部",
+    "location": "上海",
+    "level": "本科",
+    "is_private": false,
+    "tier": "985"
+  },
+  "4134010357": {
+    "school_name": "合肥工业大学",
+    "province": "安徽",
+    "competent_department": "教育部",
+    "location": "合肥",
+    "level": "本科",
+    "is_private": false,
+    "tier": "211"
+  },
+  "4134010358": {
+    "school_name": "中国科学技术大学",
+    "province": "安徽",
+    "competent_department": "中国科学院",
+    "location": "合肥",
+    "level": "本科",
+    "is_private": false,
+    "tier": "985"
+  },
+  "4134010359": {
+    "school_name": "安徽大学",
+    "province": "安徽",
+    "competent_department": "安徽省",
+    "location": "合肥",
+    "level": "本科",
+    "is_private": false,
+    "tier": "211"
+  },
+  "4134010360": {
+    "school_name": "安徽工业大学",
+    "province": "安徽",
+    "competent_department": "安徽省",
+    "location": "马鞍山",
+    "level": "本科",
+    "is_private": false,
+    "tier": ""
+  }
+}
