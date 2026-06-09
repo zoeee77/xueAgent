@@ -1,0 +1,42 @@
+STDOUT:
+============================= test session starts =============================
+platform win32 -- Python 3.12.7, pytest-9.0.3, pluggy-1.6.0 -- D:\Work\python\ana\python.exe
+cachedir: .pytest_cache
+rootdir: E:\vibecodeing\claude\test
+plugins: anyio-4.13.0, langsmith-0.8.9, asyncio-1.4.0, cov-7.1.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 27 items
+
+tests/test_recommender.py::TestUserProfile::test_default_values PASSED   [  3%]
+tests/test_recommender.py::TestUserProfile::test_create_with_values PASSED [  7%]
+tests/test_recommender.py::TestRerankConfig::test_default_weights_sum PASSED [ 11%]
+tests/test_recommender.py::TestRerankConfig::test_conservative_adjustment PASSED [ 14%]
+tests/test_recommender.py::TestRerankConfig::test_aggressive_adjustment PASSED [ 18%]
+tests/test_recommender.py::TestReranker::test_rerank_score_match PASSED  [ 22%]
+tests/test_recommender.py::TestReranker::test_rerank_no_score_returns_mid PASSED [ 25%]
+tests/test_recommender.py::TestReranker::test_rerank_breakdown_keys PASSED [ 29%]
+tests/test_recommender.py::TestReranker::test_rerank_with_subject_eval PASSED [ 33%]
+tests/test_recommender.py::TestReranker::test_rerank_with_preference_match PASSED [ 37%]
+tests/test_recommender.py::TestReranker::test_rerank_conservative_user PASSED [ 40%]
+tests/test_recommender.py::TestReranker::test_rerank_sorted_descending PASSED [ 44%]
+tests/test_recommender.py::TestRiskClassifier::test_classify_charge PASSED [ 48%]
+tests/test_recommender.py::TestRiskClassifier::test_classify_stable PASSED [ 51%]
+tests/test_recommender.py::TestRiskClassifier::test_classify_safe PASSED [ 55%]
+tests/test_recommender.py::TestRiskClassifier::test_classify_limits PASSED [ 59%]
+tests/test_recommender.py::TestRiskClassifier::test_classify_max_count PASSED [ 62%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_score_reason PASSED [ 66%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_subject_eval_reason PASSED [ 70%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_location_reason PASSED [ 74%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_school_type_reason PASSED [ 77%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_max_4_reasons PASSED [ 81%]
+tests/test_recommender.py::TestGenerateRecommendationReasons::test_no_reasons_when_no_match PASSED [ 85%]
+tests/test_recommender.py::TestBuildRecommendationReport::test_basic_report PASSED [ 88%]
+tests/test_recommender.py::TestBuildRecommendationReport::test_report_with_batch_info PASSED [ 92%]
+tests/test_recommender.py::TestBuildRecommendationReport::test_report_school_recommend_structure PASSED [ 96%]
+tests/test_recommender.py::TestBuildRecommendationReport::test_report_warnings PASSED [100%]
+
+============================= 27 passed in 0.12s ==============================
+
+STDERR:
+
+RETURN CODE: 0

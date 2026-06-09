@@ -1,0 +1,27 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.7, pytest-7.4.4, pluggy-1.0.0 -- D:\Work\python\ana\python.exe
+cachedir: .pytest_cache
+rootdir: E:\vibecodeing\claude\test
+plugins: anyio-4.2.0
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_llm_chain.py ___________________
+ImportError while importing test module 'E:\vibecodeing\claude\test\tests\test_llm_chain.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+D:\Work\python\ana\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests\test_llm_chain.py:24: in <module>
+    from backend.services.llm_chain import format_history, stream_chat
+backend\services\llm_chain.py:8: in <module>
+    from backend.models.config import settings
+backend\models\__init__.py:1: in <module>
+    from .config import AppSettings, settings
+backend\models\config.py:1: in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+E   ModuleNotFoundError: No module named 'pydantic_settings'
+=========================== short test summary info ===========================
+ERROR tests/test_llm_chain.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.48s ===============================

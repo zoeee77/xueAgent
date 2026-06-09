@@ -22,17 +22,22 @@ class UserProfile(BaseModel):
 
 
 class DataRetrievalResult(BaseModel):
-    """数据检索结果。"""
+    """数据检索结果 (v4 增强版)。"""
 
     majors: list[dict] = Field(
         default_factory=list,
-        description="专业列表，每项包含 name, employment_rate, avg_salary, description",
+        description="专业列表，每项包含: name, employment_rate, avg_salary, description, "
+                    "match_score, match_reason, data_support, recommend_reason, risk_warnings",
     )
     industries: list[dict] = Field(
         default_factory=list,
         description="行业列表，每项包含 name, entry_barrier, salary_range, description",
     )
     filter_reason: str = ""
+    retrieval_meta: dict = Field(
+        default_factory=dict,
+        description="检索元信息: strategy, weights, recall_sources",
+    )
 
 
 class RoleOpinion(BaseModel):

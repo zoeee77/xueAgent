@@ -1,0 +1,240 @@
+{
+  "信息安全": {
+    "employment_rate": 0.978,
+    "avg_salary": 7599,
+    "top_directions": ["网络安全工程师", "渗透测试工程师", "安全运维工程师"],
+    "resource_threshold": "low",
+    "description": "连续11年霸榜薪酬第一，数字时代刚需，技术门槛极高，越老越吃香"
+  },
+  "微电子科学与工程": {
+    "employment_rate": 0.955,
+    "avg_salary": 7282,
+    "top_directions": ["芯片设计工程师", "半导体制造工程师", "IC验证工程师"],
+    "resource_threshold": "low",
+    "description": "芯片赛道核心专业，国家战略加持，硕士起薪普遍超2万/月，国产替代急需人才"
+  },
+  "电子科学与技术": {
+    "employment_rate": 0.948,
+    "avg_salary": 7215,
+    "top_directions": ["电子器件研发", "集成电路工程师", "通信工程师"],
+    "resource_threshold": "low",
+    "description": "芯片双雄之一，就业面比微电子更广，适配芯片/通信/电子设备多领域"
+  },
+  "自动化": {
+    "employment_rate": 0.968,
+    "avg_salary": 7108,
+    "top_directions": ["电气工程师", "嵌入式工程师", "智能制造工程师"],
+    "resource_threshold": "low",
+    "description": "工业4.0大脑，覆盖机器人/新能源车/智能制造，越老越吃香"
+  },
+  "软件工程": {
+    "employment_rate": 0.982,
+    "avg_salary": 7092,
+    "top_directions": ["后端开发工程师", "前端开发工程师", "测试工程师"],
+    "resource_threshold": "low",
+    "description": "数字经济刚需，就业率近98%，一线城市应届轻松过万，但竞争加剧"
+  },
+  "光电信息科学与工程": {
+    "employment_rate": 0.942,
+    "avg_salary": 7076,
+    "top_directions": ["光学工程师", "激光雷达工程师", "光通信工程师"],
+    "resource_threshold": "low",
+    "description": "光刻机/激光雷达核心技术支撑，技术含金量高，人才缺口大"
+  },
+  "电子信息科学与技术": {
+    "employment_rate": 0.950,
+    "avg_salary": 7058,
+    "top_directions": ["5G通信协议开发", "智能终端软件工程师", "大数据平台架构师"],
+    "resource_threshold": "low",
+    "description": "软硬兼顾型专业，就业路径多元，华为/阿里云等大厂青睐"
+  },
+  "机械设计制造及其自动化": {
+    "employment_rate": 0.955,
+    "avg_salary": 7051,
+    "top_directions": ["机械设计工程师", "工艺工程师", "数控编程工程师"],
+    "resource_threshold": "low",
+    "description": "工科万金油，覆盖新能源汽车/智能制造/航空航天，技术越扎实越吃香"
+  },
+  "机械电子工程": {
+    "employment_rate": 0.914,
+    "avg_salary": 7018,
+    "top_directions": ["机器人工程师", "机电一体化工程师", "智能控制工程师"],
+    "resource_threshold": "low",
+    "description": "机械+电子复合型，2025绿牌专业，适配智能制造/机器人产业"
+  },
+  "新能源科学与工程": {
+    "employment_rate": 0.968,
+    "avg_salary": 8058,
+    "top_directions": ["电池研发工程师", "储能工程师", "光伏工程师"],
+    "resource_threshold": "low",
+    "description": "双碳战略核心，人才缺口超200万，比亚迪/宁德时代提前校招抢人"
+  },
+  "电气工程及其自动化": {
+    "employment_rate": 0.967,
+    "avg_salary": 6971,
+    "top_directions": ["国家电网", "南方电网", "新能源车企工程师"],
+    "resource_threshold": "low",
+    "description": "体制内捷径，专业对口率86%，央企国企岗位充足，稳定性拉满"
+  },
+  "能源与动力工程": {
+    "employment_rate": 0.967,
+    "avg_salary": 7200,
+    "top_directions": ["火电工程师", "新能源发电工程师", "储能制冷工程师"],
+    "resource_threshold": "low",
+    "description": "2025就业率第一，国网/华能/大唐等能源央企热门，未来十年人才缺口破百万"
+  },
+  "人工智能": {
+    "employment_rate": 0.982,
+    "avg_salary": 13800,
+    "top_directions": ["算法工程师", "AI产品工程师", "大模型工程师"],
+    "resource_threshold": "low",
+    "description": "2025就业率榜首，应届生月薪1.2-2.5万，头部院校年薪30万+，但学历门槛高"
+  },
+  "数据科学与大数据技术": {
+    "employment_rate": 0.978,
+    "avg_salary": 12500,
+    "top_directions": ["数据分析师", "数据工程师", "量化分析师"],
+    "resource_threshold": "low",
+    "description": "新石油专业，全行业数据驱动决策刚需，3年经验年薪50万+"
+  },
+  "计算机科学与技术": {
+    "employment_rate": 0.933,
+    "avg_salary": 11500,
+    "top_directions": ["后端开发", "前端开发", "算法工程师"],
+    "resource_threshold": "low",
+    "description": "就业率93%，名校+实习的毕业生仍薪资顶尖，但行业分化加剧"
+  },
+  "物联网工程": {
+    "employment_rate": 0.972,
+    "avg_salary": 10800,
+    "top_directions": ["物联网工程师", "嵌入式开发", "智能硬件工程师"],
+    "resource_threshold": "low",
+    "description": "万物互联时代刚需，覆盖智能家居/车联网/工业互联网"
+  },
+  "金融学": {
+    "employment_rate": 0.720,
+    "avg_salary": 10500,
+    "top_directions": ["银行柜员", "理财顾问", "投行分析师"],
+    "resource_threshold": "high",
+    "description": "金融行业门槛高，985/211优先，普通家庭慎选，资源密集型"
+  },
+  "车辆工程": {
+    "employment_rate": 0.956,
+    "avg_salary": 8500,
+    "top_directions": ["整车研发工程师", "智能座舱工程师", "自动驾驶工程师"],
+    "resource_threshold": "low",
+    "description": "2025绿牌专业，新能源车企疯狂扩招，比亚迪/蔚来/小鹏常年招人"
+  },
+  "机器人工程": {
+    "employment_rate": 0.952,
+    "avg_salary": 9500,
+    "top_directions": ["机器人工程师", "运动控制算法工程师", "机器视觉工程师"],
+    "resource_threshold": "low",
+    "description": "智能制造核心，2025绿牌专业，国家机器人产业规划重点扶持"
+  },
+  "通信工程": {
+    "employment_rate": 0.959,
+    "avg_salary": 9200,
+    "top_directions": ["通信协议工程师", "网络优化工程师", "射频工程师"],
+    "resource_threshold": "low",
+    "description": "5G/6G通信刚需，华为/中兴等大厂长期招聘，技术壁垒高"
+  },
+  "临床医学": {
+    "employment_rate": 0.850,
+    "avg_salary": 9500,
+    "top_directions": ["三甲医院医师", "基层医院医师", "医学研究"],
+    "resource_threshold": "low",
+    "description": "学制长(5+3+规培)，但就业稳定，社会地位高，越老越吃香"
+  },
+  "口腔医学": {
+    "employment_rate": 0.880,
+    "avg_salary": 10200,
+    "top_directions": ["口腔科医师", "口腔诊所", "种植修复"],
+    "resource_threshold": "low",
+    "description": "医学中薪资最高，私立口腔诊所薪资丰厚，创业门槛低"
+  },
+  "护理学": {
+    "employment_rate": 0.955,
+    "avg_salary": 6500,
+    "top_directions": ["三甲医院护士", "社区护理", "养老机构护理"],
+    "resource_threshold": "low",
+    "description": "老龄化刚需，护理人才缺口千万级，三甲医院起薪8000+，编制充足"
+  },
+  "法学": {
+    "employment_rate": 0.580,
+    "avg_salary": 6000,
+    "top_directions": ["律师", "法务", "公务员"],
+    "resource_threshold": "medium",
+    "description": "必须通过法考，5+3+2周期长，普通家庭需慎重"
+  },
+  "会计学": {
+    "employment_rate": 0.780,
+    "avg_salary": 8200,
+    "top_directions": ["企业会计", "审计", "税务师"],
+    "resource_threshold": "low",
+    "description": "万金油专业，考CPA是王道，拿下证书可冲击四大/大厂财务"
+  },
+  "土木工程": {
+    "employment_rate": 0.700,
+    "avg_salary": 7500,
+    "top_directions": ["施工单位", "设计院", "地产公司"],
+    "resource_threshold": "low",
+    "description": "行业下行，分数线持续低迷，但基建仍有需求，适合能吃苦的"
+  },
+  "新闻学": {
+    "employment_rate": 0.650,
+    "avg_salary": 7200,
+    "top_directions": ["新媒体运营", "记者", "公关"],
+    "resource_threshold": "medium",
+    "description": "传统媒体萎缩，新媒体竞争激烈，非顶尖院校慎选"
+  },
+  "汉语言文学": {
+    "employment_rate": 0.680,
+    "avg_salary": 6800,
+    "top_directions": ["教师", "编辑", "公务员"],
+    "resource_threshold": "low",
+    "description": "文科基础专业，考公考编主力，但纯就业方向竞争激烈"
+  },
+  "英语": {
+    "employment_rate": 0.720,
+    "avg_salary": 7500,
+    "top_directions": ["外贸", "翻译", "教育培训"],
+    "resource_threshold": "low",
+    "description": "英语专业红利期已过，需结合其他技能才有竞争力"
+  },
+  "电子信息工程": {
+    "employment_rate": 0.965,
+    "avg_salary": 9800,
+    "top_directions": ["硬件工程师", "嵌入式工程师", "射频工程师"],
+    "resource_threshold": "low",
+    "description": "软硬兼备型工科，就业面广，华为/中兴/大疆等大厂常年招聘"
+  },
+  "集成电路设计与集成系统": {
+    "employment_rate": 0.965,
+    "avg_salary": 11000,
+    "top_directions": ["IC设计工程师", "芯片验证工程师", "版图设计工程师"],
+    "resource_threshold": "low",
+    "description": "中国芯核心专业，毕业即抢手，企业高薪争抢，学习难度大但回报高"
+  },
+  "材料科学与工程": {
+    "employment_rate": 0.820,
+    "avg_salary": 7000,
+    "top_directions": ["材料研发", "工艺工程师", "半导体材料"],
+    "resource_threshold": "low",
+    "description": "基础工科，新能源材料/半导体材料方向前景好，但传统材料方向就业一般"
+  },
+  "师范类教育": {
+    "employment_rate": 0.800,
+    "avg_salary": 7000,
+    "top_directions": ["中小学教师", "教育机构", "教育管理"],
+    "resource_threshold": "low",
+    "description": "稳定路径，考编是关键，双减后培训机构萎缩但编制教师仍然稳定"
+  },
+  "公共管理": {
+    "employment_rate": 0.680,
+    "avg_salary": 6000,
+    "top_directions": ["公务员", "事业单位", "社区管理"],
+    "resource_threshold": "low",
+    "description": "考公导向专业，就业依赖考试，竞争激烈"
+  }
+}

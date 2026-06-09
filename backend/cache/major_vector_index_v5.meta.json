@@ -1,0 +1,1893 @@
+{
+  "version": "v5.0",
+  "dimension": 384,
+  "engine": "auto",
+  "count": 60,
+  "doc_hashes": {},
+  "metadata": [
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    },
+    {
+      "name": "计算机科学与技术",
+      "employment_rate": 0.933,
+      "avg_salary": 11500,
+      "top_directions": [
+        "后端开发"
+      ],
+      "resource_threshold": "low",
+      "description": "万金油专业",
+      "courses": [
+        "数据结构",
+        "操作系统"
+      ],
+      "skills_required": [
+        "编程"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 架构师"
+      ],
+      "industries": [
+        "互联网"
+      ],
+      "keywords": [
+        "计算机",
+        "软件",
+        "编程"
+      ]
+    },
+    {
+      "name": "人工智能",
+      "employment_rate": 0.982,
+      "avg_salary": 13800,
+      "top_directions": [
+        "算法"
+      ],
+      "resource_threshold": "low",
+      "description": "AI 热门",
+      "courses": [
+        "机器学习",
+        "深度学习"
+      ],
+      "skills_required": [
+        "算法",
+        "数学"
+      ],
+      "personality_fit": [
+        "研究型"
+      ],
+      "career_paths": [
+        "AI 工程师 -> AI 专家"
+      ],
+      "industries": [
+        "人工智能",
+        "互联网"
+      ],
+      "keywords": [
+        "人工智能",
+        "AI",
+        "机器学习",
+        "大模型"
+      ]
+    },
+    {
+      "name": "金融学",
+      "employment_rate": 0.72,
+      "avg_salary": 10500,
+      "top_directions": [
+        "银行"
+      ],
+      "resource_threshold": "high",
+      "description": "资源密集型",
+      "courses": [
+        "金融学"
+      ],
+      "skills_required": [
+        "分析"
+      ],
+      "personality_fit": [
+        "社交型"
+      ],
+      "career_paths": [
+        "银行 -> 行长"
+      ],
+      "industries": [
+        "金融"
+      ],
+      "keywords": [
+        "金融",
+        "银行",
+        "投资"
+      ]
+    },
+    {
+      "name": "临床医学",
+      "employment_rate": 0.85,
+      "avg_salary": 9500,
+      "top_directions": [
+        "医师"
+      ],
+      "resource_threshold": "low",
+      "description": "稳定职业",
+      "courses": [
+        "解剖学"
+      ],
+      "skills_required": [
+        "记忆力"
+      ],
+      "personality_fit": [
+        "责任型"
+      ],
+      "career_paths": [
+        "住院医 -> 主任"
+      ],
+      "industries": [
+        "医疗"
+      ],
+      "keywords": [
+        "临床",
+        "医学",
+        "医生"
+      ]
+    },
+    {
+      "name": "电子信息工程",
+      "employment_rate": 0.965,
+      "avg_salary": 9800,
+      "top_directions": [
+        "硬件"
+      ],
+      "resource_threshold": "low",
+      "description": "软硬兼备",
+      "courses": [
+        "电路"
+      ],
+      "skills_required": [
+        "电路设计"
+      ],
+      "personality_fit": [
+        "逻辑型"
+      ],
+      "career_paths": [
+        "工程师 -> 总监"
+      ],
+      "industries": [
+        "通信",
+        "电子"
+      ],
+      "keywords": [
+        "电子",
+        "信息",
+        "硬件",
+        "嵌入式"
+      ]
+    }
+  ]
+}
