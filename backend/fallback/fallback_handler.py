@@ -1,26 +1,19 @@
-import json
-import os
+"""Fallback handler: uses KnowledgeBase (PostgreSQL) for data access."""
 
-
-_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-
-
-def _load_majors() -> dict:
-    with open(os.path.join(_DATA_DIR, "majors.json"), "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def _load_universities() -> dict:
-    with open(os.path.join(_DATA_DIR, "universities.json"), "r", encoding="utf-8") as f:
-        return json.load(f)
+from backend.services.knowledge_base import KnowledgeBase
 
 
 class FallbackHandler:
     """Handles LLM failures with rule-based recommendations."""
 
     def __init__(self):
-        self._majors_cache: dict | None = None
-        self._universities_cache: dict | None = None
+        self._kb: KnowledgeBase | None = None
+
+    def _get_kb(self) -> KnowledgeBase:
+        """Lazy-load KnowledgeBase."""
+        if self._kb is None:
+            self._kb = KnowledgeBase()
+        return self._kb
 
     # -- public API ----------------------------------------------------------
 
@@ -69,8 +62,10 @@ class FallbackHandler:
         """
         Return 3 plans (冲 / 稳 / 保) based on simple score matching.
         """
-        majors = _load_majors()
-        universities = _load_universities()
+        # Use provided kb or lazy-load from PostgreSQL
+        knowledge_base = kb or self._get_kb()
+        majors = knowledge_base.all_majors
+        universities = knowledge_base.all_universities
 
         # --- select high-employment majors (> 0.9) filtered by interests ----
         good_majors = {

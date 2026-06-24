@@ -1,5 +1,6 @@
 """LangChain LLM 链模块：构建和管理 LLM 调用。"""
 
+import threading
 from typing import Optional, AsyncGenerator
 
 from langchain_openai import ChatOpenAI
@@ -7,16 +8,30 @@ from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 from backend.models.config import settings
 
+# -- LLM 单例 ----------------------------------------------------------------
+
+_llm_instance: Optional[ChatOpenAI] = None
+_llm_lock = threading.Lock()
+
 
 def create_llm() -> ChatOpenAI:
-    """创建 LLM 实例，从配置读取参数。"""
-    return ChatOpenAI(
-        model=settings.openai_model,
-        openai_api_key=settings.openai_api_key,
-        openai_api_base=settings.openai_api_base,
-        streaming=True,
-        temperature=0.7,
-    )
+    """创建/返回 LLM 单例实例（线程安全懒加载）。
+
+    避免每次调用都重新创建 ChatOpenAI 实例带来的初始化开销。
+    配置变化时需重启服务。
+    """
+    global _llm_instance
+    if _llm_instance is None:
+        with _llm_lock:
+            if _llm_instance is None:
+                _llm_instance = ChatOpenAI(
+                    model=settings.openai_model,
+                    openai_api_key=settings.openai_api_key,
+                    openai_api_base=settings.openai_api_base,
+                    streaming=True,
+                    temperature=0.7,
+                )
+    return _llm_instance
 
 
 def format_history(history: list) -> list:

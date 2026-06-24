@@ -19,7 +19,12 @@ class AppSettings(BaseSettings):
     embedding_cache_max_size: int = 10000
 
     # Vector Index 配置
-    vector_index_engine: str = "auto"       # faiss | numpy | auto
+    vector_index_engine: str = "auto"       # faiss | numpy | auto | qdrant
+
+    # Qdrant 向量数据库配置
+    qdrant_url: str = ""
+    qdrant_api_key: str = ""
+    qdrant_collection: str = "majors"
 
     # 应用配置
     cache_ttl_seconds: int = 300

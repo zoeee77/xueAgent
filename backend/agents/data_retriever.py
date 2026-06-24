@@ -14,6 +14,9 @@ from backend.services.knowledge_base import KnowledgeBase
 from backend.services.embedding_service import EmbeddingService
 from backend.services.vector_index import VectorIndex, build_major_document
 
+# Qdrant 向量数据库（可选，当 vector_index_engine="qdrant" 时使用）
+from backend.services.qdrant_index import QdrantIndex
+
 logger = logging.getLogger(__name__)
 
 # 行业-专业关键词映射（用于关键词召回）
@@ -171,26 +174,64 @@ class DataRetrieverV4:
         self._w_keyword = settings.retrieval_weight_keyword
     
     def _ensure_vector_index(self) -> None:
-        """懒加载构建向量索引（V5: 支持持久化和多字段 embedding）。"""
+        """懒加载构建向量索引（V5: 支持持久化、多字段 embedding、Qdrant 云端）。"""
         if self._index_built:
             return
-        
+
         all_majors = self.kb.all_majors
         all_names = list(all_majors.keys())
-        
-        # 初始化向量索引
+
+        # V5: 支持 Qdrant 云端向量数据库
+        engine = settings.vector_index_engine.lower()
+        if engine == "qdrant":
+            self._init_qdrant_index(all_majors, all_names)
+        else:
+            self._init_local_index(all_majors, all_names)
+
+        self._index_built = True
+
+    def _init_qdrant_index(self, all_majors: Dict[str, dict], all_names: List[str]) -> None:
+        """初始化 Qdrant 云端向量索引。"""
+        logger.info("Initializing Qdrant vector index (Collection=%s)...", settings.qdrant_collection)
+
+        self.vector_index = QdrantIndex(
+            dimension=self.embedding.dimension,
+            collection_name=settings.qdrant_collection,
+        )
+
+        if not self.vector_index.is_ready:
+            logger.warning(
+                "Qdrant 不可用，回退到本地向量索引 (engine=%s)",
+                settings.vector_index_engine,
+            )
+            self._init_local_index(all_majors, all_names)
+            return
+
+        # 检查是否需要重建
+        if self.vector_index.needs_rebuild(all_majors):
+            logger.info("Qdrant Collection 数据不一致，重建中...")
+            self._rebuild_index(all_majors, all_names)
+            self.vector_index.save(settings.qdrant_collection)
+        else:
+            logger.info(
+                "Qdrant 索引已就绪: %d majors",
+                self.vector_index.count,
+            )
+
+    def _init_local_index(self, all_majors: Dict[str, dict], all_names: List[str]) -> None:
+        """初始化本地向量索引 (FAISS/NumPy)。"""
         self.vector_index = VectorIndex(
             dimension=self.embedding.dimension,
             engine=settings.vector_index_engine,
             persist_path=self._index_path,
         )
-        
+
         # V5: 优先加载持久化索引，不存在则构建新索引
         if VectorIndex.exists(self._index_path):
             logger.info("Loading persisted vector index from %s", self._index_path)
             # 索引已在 VectorIndex._ensure_loaded 中自动加载
             self._index_built = True
-            
+
             # 检查是否需要重建（对比哈希）
             if self.vector_index.needs_rebuild(all_majors):
                 logger.info("Index outdated, rebuilding...")
@@ -347,13 +388,13 @@ class DataRetrieverV4:
     def _query_understand(self, profile: UserProfile) -> QueryContext:
         """解析用户画像为结构化查询上下文。"""
         ctx = QueryContext(
-            interest_keywords=profile.interests.copy(),
+            interest_keywords=list(profile.interests) if profile.interests else [],
             score=profile.score,
             province=profile.province,
             risk_preference=profile.risk_preference,
             personality=profile.personality or "",
             family_resources=profile.family_resources or "普通",
-            exclude_majors=profile.constraints.copy(),
+            exclude_majors=list(profile.constraints) if profile.constraints else [],
         )
         return ctx
 
@@ -405,21 +446,37 @@ class DataRetrieverV4:
         # 使用 VectorIndex 进行 TopK 检索
         all_names = list(self.kb.all_majors.keys())
         top_k = len(all_names)
-        results = self.vector_index.search(query_embedding, top_k=top_k)
+        
+        # V5 优化：Qdrant 引擎支持 with_payload 参数，避免 N+1 HTTP 请求
+        try:
+            results = self.vector_index.search(query_embedding, top_k=top_k, with_payload=True)
+            use_payload = True
+        except TypeError:
+            # 本地 VectorIndex 不支持 with_payload 参数，回退到旧接口
+            results = self.vector_index.search(query_embedding, top_k=top_k)
+            use_payload = False
         
         # 将检索结果填入召回项
         kb_names = set(self.kb.all_majors.keys())
-        for idx, score in results:
-            # V5: 优先从 metadata 获取名称，回退到位置映射
-            meta = self.vector_index.get_metadata(idx)
-            name = meta.get("name", "")
-            if not name and idx < len(all_names):
-                name = all_names[idx]
-            
-            # 只处理当前知识库中存在的专业
-            if name and name in kb_names and score > 0.0:
-                _ensure(name)
-                items[name].scores["semantic"] = score
+        if use_payload:
+            # Qdrant: (idx, score, payload)
+            for idx, score, meta in results:
+                name = meta.get("name", "")
+                if not name and idx < len(all_names):
+                    name = all_names[idx]
+                if name and name in kb_names and score > 0.0:
+                    _ensure(name)
+                    items[name].scores["semantic"] = score
+        else:
+            # 本地 VectorIndex: (idx, score)
+            for idx, score in results:
+                meta = self.vector_index.get_metadata(idx)
+                name = meta.get("name", "")
+                if not name and idx < len(all_names):
+                    name = all_names[idx]
+                if name and name in kb_names and score > 0.0:
+                    _ensure(name)
+                    items[name].scores["semantic"] = score
 
     def _recall_rule(
         self, ctx: QueryContext, items: Dict[str, RecallItem], _ensure

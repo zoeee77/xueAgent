@@ -118,8 +118,14 @@ class VectorIndex:
         self._doc_hashes: Dict[str, str] = {}  # name -> doc_hash
         self._dirty = False
 
-        if engine is None:
-            engine = "faiss" if self._check_faiss() else "numpy"
+        # 自动检测 faiss 可用性
+        faiss_available = self._check_faiss()
+
+        if engine is None or engine == "auto":
+            engine = "faiss" if faiss_available else "numpy"
+        elif engine == "faiss" and not faiss_available:
+            logger.warning("FAISS 引擎指定但未安装，回退到 NumPy 引擎")
+            engine = "numpy"
 
         self._engine = engine
         self._index = None

@@ -103,9 +103,16 @@ class UserProfiler:
         Returns:
             UserProfile: 基于规则的用户画像
         """
-        score = int(user_input.get("score", 0))
+        score_raw = user_input.get("score", 0)
+        if score_raw is None:
+            score_raw = 0
+        try:
+            score = int(score_raw)
+        except (TypeError, ValueError):
+            logger.warning("Invalid score value %r, defaulting to 0", score_raw)
+            score = 0
         province = str(user_input.get("province", ""))
-        interests = user_input.get("interests", [])
+        interests = user_input.get("interests", []) or []
         personality = user_input.get("personality")
         family_resources = user_input.get("family_resources")
 

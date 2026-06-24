@@ -1,19 +1,11 @@
-import json
-from pathlib import Path
-from typing import Optional
+"""Industry query tool: uses KnowledgeBase (PostgreSQL) for data access."""
 
-
-_DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "industries.json"
-
-
-def _load_industries() -> dict:
-    with open(_DATA_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+from backend.services.knowledge_base import KnowledgeBase
 
 
 def query_industry(
-    name: Optional[str] = None,
-    entry_barrier: Optional[str] = None,
+    name: str | None = None,
+    entry_barrier: str | None = None,
 ) -> list[dict]:
     """Query industries with optional filters.
 
@@ -24,10 +16,11 @@ def query_industry(
     Returns:
         List of matching industries with their data.
     """
-    industries = _load_industries()
+    kb = KnowledgeBase()
+    all_industries = kb.all_industries
     results = []
 
-    for ind_name, data in industries.items():
+    for ind_name, data in all_industries.items():
         if name is not None and name not in ind_name:
             continue
         if entry_barrier is not None and data.get("entry_barrier") != entry_barrier:

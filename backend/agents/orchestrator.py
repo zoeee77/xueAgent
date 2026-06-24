@@ -340,7 +340,10 @@ class Orchestrator:
         # 初始化所有子智能体
         self.user_profiler = UserProfiler()
         self.data_retriever = DataRetrieverV4(kb=kb)
-        self.multi_role_reasoner = MultiRoleReasoner()
+        from backend.services.prompt_builder import PromptBuilder
+        self.multi_role_reasoner = MultiRoleReasoner(
+            prompt_builder=PromptBuilder(knowledge_base=kb)
+        )
         self.planner = Planner(kb=kb)
         self.ranker = Ranker()
         self.devil_advocate = DevilAdvocate()
@@ -654,9 +657,9 @@ class Orchestrator:
                 "constraints": profile.constraints,
             },
             "data_retrieval": {
-                "majors": data_result.majors,
-                "industries": data_result.industries,
-                "filter_reason": data_result.filter_reason,
+                "majors": data_result.majors if data_result else [],
+                "industries": data_result.industries if data_result else [],
+                "filter_reason": data_result.filter_reason if data_result else "无",
             },
             "multi_role_analysis": {
                 "opinions": [

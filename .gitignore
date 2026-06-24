@@ -10,3 +10,34 @@ venv/
 htmlcov/
 .DS_Store
 *.log
+node_modules/
+.idea/
+*.iml
+target/
+.classpath
+.project
+.settings/
+*.class
+*.jar
+*.war
+build/
+
+# ─── 本地数据文件（不提交到版本控制）──────────
+backend/data/*.json
+backend/data/*.db
+backend/data/*.sqlite*
+
+# ─── 缓存文件 ────────────────────────────────
+backend/cache/*.json
+backend/cache/*.npy
+backend/cache/*.meta.json
+
+# ─── 生成的报告 ──────────────────────────────
+reports/
+
+# ─── 独立子项目（各自独立仓库）────────────────
+Understand-Anything/
+shushu-internship-tool/
+
+# ─── Trae IDE 特定文件 ───────────────────────
+.trae/

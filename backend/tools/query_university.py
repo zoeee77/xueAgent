@@ -1,21 +1,13 @@
-import json
-from pathlib import Path
-from typing import Optional
+"""University query tool: uses KnowledgeBase (PostgreSQL) for data access."""
 
-
-_DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "universities.json"
-
-
-def _load_universities() -> dict:
-    with open(_DATA_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+from backend.services.knowledge_base import KnowledgeBase
 
 
 def query_university(
-    name: Optional[str] = None,
-    province: Optional[str] = None,
-    tier: Optional[str] = None,
-    min_score: Optional[int] = None,
+    name: str | None = None,
+    province: str | None = None,
+    tier: str | None = None,
+    min_score: int | None = None,
 ) -> list[dict]:
     """Query universities with optional filters.
 
@@ -28,7 +20,8 @@ def query_university(
     Returns:
         List of matching universities with their data.
     """
-    universities = _load_universities()
+    kb = KnowledgeBase()
+    universities = kb.all_universities
     results = []
 
     for uni_name, data in universities.items():

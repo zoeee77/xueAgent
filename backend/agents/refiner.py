@@ -321,6 +321,9 @@ class Refiner:
         """
         changes = []
         new_options = []
+        # 轮转使用偏好专业，避免冲/稳/保三档变成同一专业
+        prefer_idx = 0
+        used_majors: set[str] = set()
 
         for option in options:
             # 检查是否已有偏好专业
@@ -340,8 +343,18 @@ class Refiner:
                 )
                 new_options.append(new_option)
             else:
-                # 尝试替换为偏好专业
-                replacement = prefer_majors[0]  # 使用第一个偏好专业
+                # 轮转选择偏好专业，跳过已使用的
+                replacement = None
+                for _ in range(len(prefer_majors)):
+                    candidate = prefer_majors[prefer_idx % len(prefer_majors)]
+                    prefer_idx += 1
+                    if candidate not in used_majors:
+                        replacement = candidate
+                        break
+                if replacement is None:
+                    replacement = prefer_majors[0]  # 兜底
+
+                used_majors.add(replacement)
                 major_info = kb.query_major(replacement)
                 if major_info:
                     reason = (

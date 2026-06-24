@@ -7,6 +7,71 @@ import uuid
 import httpx
 import streamlit as st
 
+# -- formatting helpers ------------------------------------------------------
+
+def _safe_join(items):
+    """安全地 join 列表项，兼容 list[str] / list[dict] / None / []。"""
+    if not items:
+        return ""
+    # 防御：第一项不是 str 也不是 dict，直接转 str
+    if not isinstance(items[0], (str, dict)):
+        return ", ".join(str(x) for x in items if x)
+    # dict 类型：优先提取 name
+    if isinstance(items[0], dict):
+        return ", ".join(x.get("name", "") for x in items if x.get("name"))
+    # str 类型
+    return ", ".join(str(x) for x in items if x)
+
+
+def format_majors(majors):
+    """格式化专业列表，支持 list[str] 和 list[dict]，带分数显示。
+
+    - list[str] → "计算机科学、软件工程"
+    - list[dict] → "计算机科学（650分）、软件工程（640分）"
+    """
+    if not majors:
+        return ""
+    if not isinstance(majors, list):
+        return str(majors)
+    first = majors[0]
+    # 防御：第一项既不是 str 也不是 dict
+    if not isinstance(first, (str, dict)):
+        return ", ".join(str(x) for x in majors if x)
+    # dict 类型
+    if isinstance(first, dict):
+        parts = []
+        for m in majors:
+            name = m.get("name", "")
+            score = m.get("score")
+            if not name:
+                continue
+            parts.append(f"{name}（{score}分）" if score else name)
+        return "、".join(parts) if parts else ""
+    # str 类型
+    return ", ".join(str(m) for m in majors if m)
+
+
+def format_universities(unis):
+    """格式化院校列表，支持 list[str] / list[dict] / None。"""
+    if not unis:
+        return ""
+    if not isinstance(unis, list):
+        return str(unis)
+    first = unis[0]
+    if not isinstance(first, (str, dict)):
+        return ", ".join(str(x) for x in unis if x)
+    if isinstance(first, dict):
+        parts = []
+        for u in unis:
+            name = u.get("name", "")
+            if not name:
+                continue
+            tier = u.get("tier", "")
+            parts.append(f"{name}（{tier}）" if tier else name)
+        return "、".join(parts) if parts else ""
+    return ", ".join(str(u) for u in unis if u)
+
+
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
 st.set_page_config(
@@ -123,18 +188,26 @@ def display_multi_role(result):
 
 def display_plans(plans):
     """展示推荐方案。"""
-    st.subheader("📝 四、推荐方案")
-    options = plans.get("options", [])
+    st.subheader(" 四、推荐方案")
+    # 兼容 fallback 模式（plans 为 list）和正常模式（plans 为 dict）
+    if isinstance(plans, list):
+        options = plans
+    else:
+        options = plans.get("options", [])
     for opt in options:
-        risk = opt.get("risk_level", "")
+        risk = opt.get("risk_level") or opt.get("tier", "")
         risk_class = {"冲": "risk-chong", "稳": "risk-wen", "保": "risk-bao"}.get(risk, "")
+        # 使用 helper 安全格式化
+        unis_text = format_universities(opt.get("universities")) or "暂无匹配"
+        # major 可能是 str 或 majors list[dict]
+        major_text = opt.get("major") or format_majors(opt.get("majors")) or "N/A"
         st.markdown(
             f"""
 <div class="plan-card {risk_class}">
-    <h3>{render_risk_label(risk)} {opt.get('major', 'N/A')}</h3>
-    <p><b>推荐院校：</b>{', '.join(opt.get('universities', [])) or '暂无匹配'}</p>
+    <h3>{render_risk_label(risk)} {major_text}</h3>
+    <p><b>推荐院校：</b>{unis_text}</p>
     <p><b>理由：</b>{opt.get('reason', '')}</p>
-    <p><b>预期分数：</b>{opt.get('expected_score', 'N/A')}</p>
+    <p><b>预期分数：</b>{opt.get('expected_score', opt.get('score_range', 'N/A'))}</p>
 </div>
 """,
             unsafe_allow_html=True,
@@ -179,7 +252,11 @@ def display_devil_advocate(result):
 
 def display_explanation(result):
     """展示解释说明。"""
-    st.subheader("💡 七、解释说明")
+    st.subheader(" 七、解释说明")
+    # 兼容 fallback 模式（explanation 为 str）和正常模式（explanation 为 dict）
+    if isinstance(result, str):
+        st.markdown(result)
+        return
     st.markdown(f"**为什么推荐：** {result.get('why_recommended', 'N/A')}")
     st.markdown(f"**为什么排第一：** {result.get('why_first', 'N/A')}")
     st.markdown(f"**不推荐的原因：** {result.get('why_not_others', 'N/A')}")
