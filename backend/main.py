@@ -6,7 +6,6 @@ import logging
 import time
 import traceback
 import uuid
-from collections import OrderedDict
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, status, Depends
@@ -29,6 +28,7 @@ from backend.agents.refiner import Refiner
 from backend.agents.intent_parser import IntentParser
 from backend.memory.memory_manager import MemoryManager
 from backend.fallback.fallback_handler import FallbackHandler
+from backend.session.lru_session_store import LRUSessionStore
 from backend.session.postgres_session_store import PostgreSQLSessionStore
 from backend.auth.jwt_auth import get_current_user, create_access_token
 from backend.auth.user_store import create_user, authenticate_user
@@ -57,6 +57,10 @@ async def ensure_session_owner_impl(user_id: str, session_id: str, store: Postgr
         )
 
 
+# LRU 会话缓存：LRU 淘汰 + TTL 过期（max_size=1000, ttl=1800s, evict_ratio=10%）
+lru_session_store = LRUSessionStore(max_size=1000, ttl_seconds=1800, evict_ratio=0.1)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """应用启动/关闭时的生命周期管理。"""
@@ -68,7 +72,7 @@ async def lifespan(app: FastAPI):
     intent_parser = IntentParser()
     memory_manager = MemoryManager()
     fallback_handler = FallbackHandler()
-    pg_session_store = PostgreSQLSessionStore()
+    pg_session_store = PostgreSQLSessionStore(lru_cache=lru_session_store)
 
     # 设置日志
     setup_logging()
@@ -90,52 +94,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="张雪峰 AI 志愿填报顾问", lifespan=lifespan)
-
-
-class SessionStore:
-    """带 TTL + LRU 淘汰的 session 存储，防止内存泄漏。
-
-    - 最大 1000 个 session
-    - 30 分钟无访问自动淘汰
-    - 满时淘汰最旧的 10%
-    """
-
-    def __init__(self, max_size: int = 1000, ttl_seconds: int = 1800):
-        self._cache: dict[str, tuple[list[dict], float]] = {}
-        self._max_size = max_size
-        self._ttl = ttl_seconds
-
-    def get(self, key: str) -> list[dict]:
-        if key in self._cache:
-            data, ts = self._cache[key]
-            if time.time() - ts < self._ttl:
-                return data
-            del self._cache[key]
-        return []
-
-    def set(self, key: str, value: list[dict]):
-        if len(self._cache) >= self._max_size:
-            # 淘汰最久未访问的 10%
-            n = max(1, self._max_size // 10)
-            oldest = sorted(self._cache.items(), key=lambda x: x[1][1])[:n]
-            for k, _ in oldest:
-                del self._cache[k]
-        self._cache[key] = (value, time.time())
-
-    def append(self, key: str, item: dict):
-        data = self.get(key)
-        data.append(item)
-        self.set(key, data)
-
-    def cleanup(self):
-        now = time.time()
-        expired = [k for k, (_, ts) in self._cache.items() if now - ts >= self._ttl]
-        for k in expired:
-            del self._cache[k]
-
-
-# Session 存储：带 TTL + LRU 淘汰
-session_store = SessionStore(max_size=1000, ttl_seconds=1800)
 
 
 @app.get("/health", response_model=HealthResponse)
